@@ -1,0 +1,10 @@
+<div id="products-featured">
+	<h3 class="products-filters-heading">Clearance</h3>
+	<div ng-repeat="product in clearanceproducts|filter:{'sale':'true'}" class="sale-products">
+		<div id="single-product-image"><img ng-src="{{product.imgurl}}" style="width:60px !important;height:100px !important;"/></div>
+		<div>
+			<div>{{product.name}}</div>
+			<div class="product-actual-price">{{product.price| currency}}</div>
+		</div>
+	</div>
+</div>

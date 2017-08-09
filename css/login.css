@@ -1,0 +1,66 @@
+	body{
+			width:100%;
+		}
+		#login{
+			border:1px solid black;
+			width:500px;
+			margin:0 auto;
+			height:250px;
+			border-radius:5px;
+		}
+		#login h2{
+			text-align: center;
+			margin-bottom:5px;
+		}
+		#login p{
+			width:500px;
+		}
+		#login p label{
+			width:90px;
+			float:left;
+			clear:both;
+			padding:5px 0px 4px 6px;
+			margin:0;
+		}
+		#login p .validations{
+			padding:7px;
+			width:250px;
+			float:left;
+		}
+		#login .login{
+			width:150px;
+			float:left;
+			clear:left;
+			padding:5px;
+			margin-left:6px;
+			margin-top:15px;
+		}
+		#login #forget{
+			float:right;
+			padding-right:15px;
+			margin-top:15px;
+		}
+		#create{
+			margin-top:15px;
+			text-align: center;
+		}
+		/*#login label{
+			margin:5px 20px 5px 10px;
+		}
+		#login input{
+			padding:5px;
+			width:350px;
+			margin:5px;
+		}
+		#login div .login{
+			padding:3px;
+			float:left;
+			margin-left:10px;
+			clear:left;
+		}
+		#login div #forget{
+			float:right;
+		}
+		#login #create{
+			overflow:hidden;
+		}*/

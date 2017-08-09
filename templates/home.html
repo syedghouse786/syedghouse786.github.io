@@ -1,0 +1,45 @@
+
+<!--BANNER STARTS HERE -->
+<div id="banner">
+<!--SLIDES STARTS HERE -->
+	<div class="slides">
+	<span ng-repeat="bannerImage in bannerImages" >
+		<span class="slidebackground">
+		<img class="bannerimages" ng-src="{{bannerImage.phone}}" alt="slideimages" ng-show="$index==slidenumber" />
+		</span>
+	</span>
+				<a href="" class="previousimage" ng-click="nextimage()" ><img class="nextpreviousbuttons" src="{{previousImage}}" alt="leftarrowlogo" /></a>
+				<a href="" class="nextimage" ng-click="previmage()" ><img class="nextpreviousbuttons" src="{{nextImage}}"  alt="rightarrowlogo" /></a>
+	</div>
+	<div id="dots" class="dot">
+	<button ng-click="click($index)" ng-repeat="bannerImage in bannerImages" class="roundbuttons" ng-class="{presentslide : $index== slidenumber}" >{{$index}}</button>
+	</div>
+	
+	</div>
+	<div id="bannerbottom">
+		<div class="container">
+			<div id="bannerbottomleft">
+				<span class="inputemail">Stay updated <span><input  type="email" class="emailinputbox" name="email" placeholder="your email address" /><span class="email"><a href="">+</a></span></span></span>	
+			</div>
+			<div id="bannerbottomright">
+				<ul>
+					<li>Find us here</li>
+					<li><a href=""><img class="bannericons" src="assets/images/f.png"   alt="bannerbottomimage1"/></a></li>
+					<li><a href=""><img class="bannericons" src="assets/images/t.png"   alt="bannerbottomimage2"/></a></li>
+					<li><a href=""><img class="bannericons" src="assets/images/g.png"   alt="bannerbottomimage3"/></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- banner ends here -->
+<!-- Logos starts here -->
+
+<div class="container">
+	<ul id="brandicons">
+	<li ng-repeat="brandicons in brands"><a href=""><img ng-src="{{brandicons.brand}}"/><span class="tooltiptext">{{brandicons.brandname | uppercase}}</span></a></li>
+	
+	</ul>
+</div> 
+
+
+

@@ -1,0 +1,114 @@
+<div class="products-carousel-container">
+	<div id="products-carousel-innerwrap" ng-swipe-left="next()" ng-swipe-right="prev()">
+		<div id="products-carousel-leftwrap" class="products-carousel-wraps">
+			<div class="products-carousel-images" ng-repeat="product in products|limitTo:7" ng-show="$index==slideIndex">
+				<img ng-src="{{product.imgurl}}" style="width:180px;height:350px"/>
+			</div>
+		</div>
+		<div id="products-carousel-rightwrap" class="products-carousel-wraps">
+			<div class="products-carousel-description" ng-repeat="product in products|limitTo:7" ng-show="$index==slideIndex">
+				{{product.name}}
+				<div id="single-product-price">{{product.price| currency}}</div>
+				{{product.description}}
+				<div id="single-product-add-to-cart"><button type="button" id="single-product-add-to-cart-button" ng-click="addtocart(product)"><span id="add-to-cart">ADD TO CART</span><span id="plus-add-to-cart">&plus;</span></button></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="products-carousel-pagination">
+		<button class="carousel-pagination-buttons" ng-repeat="product in products|limitTo:7" ng-click="click($index)" ng-class="{selected: $index==slideIndex}">
+			{{$index}}
+		</button>
+	</div>
+	<div class="products-carousel-arrows">
+		<button id="arrow-prev" class="arrow-buttons" ng-click="prev()">
+			<
+		</button>
+		<button id="arrow-next" class="arrow-buttons" ng-click="next()">
+			>
+		</button>
+	</div>
+</div>
+<div style="margin:50px">
+	<div id="products-list">
+		<div id="sort-and-pagination">
+			<div id="sorting-products">
+				Sort by
+				<select ng-model="sortFilter">
+					<option value="name">Name</option>
+					<option value="price">Price</option>
+				</select>
+				<select ng-model="reverse">
+					<option value="true">High-to-Low</option>
+					<option value="">Low-to-High</option>
+				</select>
+			</div>
+			<div id="products-pagination">
+				Showing {{((presentPage)*9)+1}} - {{((presentPage+1)*9<=products.length)?(presentPage+1)*9:products.length}} of {{products.length}} results
+				<button class="products-pagination-buttons" ng-disabled="newPage('first')" ng-click="presentPage=presentPage-1" ng-class="{'disabled-button': newPage('first')}"><</button>
+				<div id="products-list-pages" ng-repeat="page in [] | pagesRange:products:startPrice:endPrice" ng-class="{'page-index': $index+1 === presentPage+1}">
+					<button class="products-pagination-buttons" ng-click="setPage($index)">{{$index+1}}</button>
+				</div>
+				<button class="products-pagination-buttons" ng-disabled="newPage('last')" ng-click="presentPage=presentPage+1" ng-class="{'disabled-button': newPage('last')}">></button>
+			</div>
+		</div>
+
+
+
+		aaaaaa
+		<div id="single-product-display" ng-repeat="product in products | priceRange:startPrice:endPrice| orderBy:sortFilter:reverse| firstProduct:presentPage*9 | limitTo:9">
+			<div id="single-product-image"><img ng-src="{{product.imgurl}}"/></div>
+			<div id="single-product-details">
+				<div id="single-product-name">{{product.name | uppercase}}</div>
+				<div id="single-product-price">{{product.price| currency}}</div>
+				<div id="single-product-add-to-cart"><button type="button" id="single-product-add-to-cart-button" ng-click="addtocart(product)"><span id="add-to-cart">ADD TO CART</span><span id="plus-add-to-cart">&plus;</span></button></div>
+			</div>
+		</div>
+		<div id="bottom-pagination">
+			<div id="products-pagination">
+				Showing {{((presentPage)*9)+1}} - {{((presentPage+1)*9<=products.length)?(presentPage+1)*9:products.length}} of {{products.length}} results
+				<button class="products-pagination-buttons" ng-disabled="newPage('first')" ng-click="presentPage=presentPage-1" ng-class="{'disabled-button': newPage('first')}"><</button>
+				<div id="products-list-pages" ng-repeat="page in [] | pagesRange:products:startPrice:endPrice:presentPage" ng-class="{'page-index': $index+1 === presentPage+1}">
+					<button class="products-pagination-buttons" ng-click="setPage($index)">{{$index+1}}</button>
+				</div>
+				<button class="products-pagination-buttons" ng-disabled="newPage('last')" ng-click="presentPage=presentPage+1" ng-class="{'disabled-button': newPage('last')}">></button>
+			</div>
+		</div>
+	</div>
+	<div id="products-filters">
+		<div id="products-categories">
+			<h3 class="products-filters-heading">Categories</h3>
+			<div>
+				Price: $ 
+				<input type="text" style="width: 40px;padding:5px !important;" ng-model="inputStartPrice"> 
+				to $ 
+				<input type="text" style="width: 40px;padding:5px !important;" ng-model="inputEndPrice">
+				<button type="button" ng-click="newPriceRange(inputStartPrice,inputEndPrice)">Go</button>
+			</div>
+			<div>Two</div>
+			<div>Three</div>
+			<div>Four</div>
+		</div>
+		<div id="products-on-sale">
+			<h3 class="products-filters-heading">On Sale</h3>
+			<div ng-repeat="product in products|filter:{'sale':'true'}|limitTo:3" class="sale-products">
+				<div id="single-product-image"><img ng-src="{{product.imgurl}}" style="width:60px !important;height:100px !important;"/></div>
+				<div>
+					<div>{{product.name}}</div>
+					<div class="product-actual-price"><del><strong>{{product.price| currency}}</strong></del></div>
+					<div class="product-sale-price">{{product['sale price']| currency}}</div>
+				</div>
+			</div>
+		</div>
+		<div id="products-featured">
+			<h3 class="products-filters-heading">Featured Products</h3>
+			<div ng-repeat="product in products|filter:{'featured':'true'}|limitTo:3" class="sale-products">
+				<div id="single-product-image"><img ng-src="{{product.imgurl}}" style="width:60px !important;height:100px !important;"/></div>
+				<div>
+					<div>{{product.name}}</div>
+					<div class="product-actual-price">{{product.price| currency}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

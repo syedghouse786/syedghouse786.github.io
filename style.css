@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "Oxygen";
+    src: url("../fonts/Oxygen.otf");
+}
+body{
+	font-family:  'Oxygen';
+}
+body{
+	width:100%;
+	margin:0;
+	padding:0;
+}
+.container{
+	width:1100px;
+	margin:0 auto;
+}
+
+/*footer starts here*/
+/* starts here */
+#footerHead{
+	background-color:white;
+	width:100%;
+}
+#footerHead .container h3{
+	text-align: center;
+}
+#footerHead .container p{
+	text-align: center;
+}
+/*ends here */
+/* starts here */
+#footerIcons{
+	width:100%;
+	background-color:#f5f5f5;
+	overflow:hidden;
+}
+#footerIcons .container ul{
+	text-align: center;
+}
+#footerIcons .container ul li{
+	list-style-type: none;
+	display:inline-block;
+	margin-right:5px;
+	vertical-align: middle;
+}
+/*#footerIcons .container ul li:first-child{
+	height:100%;
+}
+#footerIcons .container ul li:before{
+	content:'';
+	height:100%;
+	display:inline-block;
+	vertical-align: middle;
+}*/
+#footerIcons .container ul li img{
+	height:30px;
+	width:40px;
+}
+/*ends here */
+/* starts here */
+#footerFoot{
+	background-color:#ebebeb;
+	overflow:hidden;
+}
+#footerFoot .container .footerSections{
+	
+	float:left;
+	width:210px;
+	margin:0px;
+}
+#footerFoot .container .footerSections ul{
+	margin-left:0;
+	padding-left:0;
+}
+#footerFoot .container .footerSections ul li{
+	list-style-type: none;
+	margin-left:0;
+	padding-left:0;
+}
+#footerFoot .container .footerSections:nth-child(4){
+	float:left;
+	width:120px;
+	margin:0px;
+}
+#footerFoot .container .footerSections:nth-child(5){
+	float:left;
+	width:150px;
+	margin:0px;
+	padding-right:10px;
+}
+#footerFoot .container .footerSections h4{
+	margin-bottom:30px;
+}
+#footerFoot .container .footerSections img{
+	width:35px;
+	height:35px;
+	display:inline-block;
+}
+#footerFoot .container #footerSectionImage img{
+	width:100px;
+	height:100px;
+	margin-right:0;
+	position:absolute;
+	top:35%;
+	left:20%;
+}
+#footerFoot .container #footerSectionImage{
+	height:184.53px;
+	width:190px;
+	float:left;
+	position:relative;
+}
+/*footer starts here*/
+/*ends here */

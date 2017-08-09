@@ -1,0 +1,25 @@
+<div id="container">
+<h1>REGISTER</h1>
+<label>Name</label>
+	<input type="name" name="firstname" class="names" ng-keypress="color()" ng-model="fname" placeholder="Enter your First name"  />
+	<input type="name" name="lastname" class="names" ng-keypress="colors()" ng-model="lname" placeholder="Enter your Last name"/>
+<label>Choose Your User Name</label>
+	<input type="name" name="username" ng-keypress="color1()" class="inputs" ng-model="username" placeholder="Enter your User Name" />
+<label>Create a Password</label>
+	<input type="password" name="password" ng-keypress="color2()" class="inputs" ng-model="passwrd" placeholder="Enter your Password" />
+<label>Confirm your Password</label>
+	<input type="password" name="confirmpassword" ng-keypress="color3()" class="inputs" ng-model="confirmpassword" placeholder="Confirm your Password" />
+<label>Mobile Phone</label>
+	<input  name="phone" class="inputs" ng-keypress="color4()" ng-model="phone" placeholder="Enter your Phone Number" />
+<label>Enter Email Address</label>
+	<input type="email" name="email" class="inputs" ng-keypress="color5()" ng-model="email"  placeholder="Enter your Email Address " />
+<label>Please enter the Security question</label>
+	<select class="select">
+		<option value="petname" ng-model="petname">what is your first pet name?</option>
+		<option value="carmodel" ng-model="carmodel">what is your car model?</option>
+		<option value="friendname" ng-model="friendname">what is your best friend name?</option>
+	</select>
+<input type="text" name="answer" class="inputs" ng-keypress="color6()" ng-model="securityanswer">
+
+<div id="register"><button ng-click="submitform()">Register</button></div>
+</div>

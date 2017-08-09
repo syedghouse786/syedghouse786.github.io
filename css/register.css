@@ -1,0 +1,48 @@
+body{
+			width:100%;
+			padding:0;
+			margin:0;
+			font-size: 16px;
+		}
+		h1,h2,h3,h4,p{
+			padding:0;
+			margin:0;
+		}
+		#container{
+			width:800px;
+			margin:0 auto;
+		}
+		label{
+			display:block;
+			font-weight:bold;
+			margin:10px 0;
+		}
+		input{
+			padding:10px;
+
+		}
+		.names{
+			display:inline-block;
+			width:25%;
+		}
+		.inputs{
+			width:53%;
+		}
+		#register{
+			display: block;
+			text-align: center;
+			width:50%;
+		}
+		#register button{
+			margin:10px 0;
+			width:auto;
+			padding: 10px 50px;
+			background-color: #d3d3d3;
+			color:black;
+			font-weight: bold;
+			border-radius: 12px;
+		}
+		.select{
+			padding:10px;
+		}
+		

@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/productslist.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+</head>
+<body ng-app="shoppingcart">
+<!--HEADER STARTS HERE -->
+	<div id="header">
+		<div id="headertop">
+			<div class="container">
+				<div class="customdetails">CUSTOM CARE:<span class="customphone">888-23-4567</span></div>	
+				<ul class="headertoplist">
+					<li>
+					<select>
+						<option>$US</option>
+						<option>IND</option>
+					</select>
+					</li>
+					<li><a href=""><img src="assets/images/userr.png" class="search" alt="user" /><span class="myaccount">MY ACCOUNT</span></a></li>
+					<li><a href=""><img src="assets/images/search.png" class="search" alt="search" /></a></li>
+				</ul>
+			</div>
+		</div>
+	
+<!--HEADERBOTTOM STARTS HERE -->
+	<div id="headerbottom">
+		<div class="container">
+			<span class="logo"><img src="assets/images/logo.png" alt="lookshoplogo" align="middle" style="width:100px"/></span>
+			<ul class="headerbottomlist">
+				<li><a href="#">HOME</a></li>
+				<li><a href="#logIn">LOGIN</a></li>
+				<li><a href="#productslist">PRODUCTS</a></li>
+				<li><a href="">CLEARANCE</a></li>
+			<ul class="cartlist">
+				<li>  
+					<select>
+						<option>Your cart</option>
+						<option>Check out</option>
+					</select>
+				</li>
+				<li><img class="carticon" src="assets/images/bag.png" alt="baglogo" /><span class="items">0 ITEMS | $0</span></li>
+			</ul>
+		</ul>		
+		</div>
+	</div>
+	</div>
+	 <!--HEADER ENDS HERE -->
+<!--BANNER STARTS HERE -->
+<div id="banner">
+<!--SLIDES STARTS HERE -->
+	<div class="slides">
+		<span class="slide" id="image1"><img  src="assets/images/banner3.png"   alt="slideimage1"/></span>
+		<span class="slide" id="image2"><img src="assets/images/banner2.png" class="image2"  alt="slideimage2"/></span>
+		<span class="slide" id="image3"><img class="blueimage" src="assets/images/new.png"   alt="slideimage3"/></span>
+		<span class="slide" id="image4"><img class="blackimage" src="assets/images/mobile_banner.jpg"   alt="slideimage4"/></span>
+				<a href="" class="back" onclick="next(this)" value="1"><img class="next" src="assets/images/left.png" alt="leftarrowlogo" /></a>
+				<a href="" class="front" onclick="next(this)" value="2"><img class="next" src="assets/images/right.png"  alt="rightarrowlogo" /></a>
+	</div>
+	<div id="bannerbottom">
+		<div class="container">
+			<div id="bannerbottomleft">
+				<span class="line">Stay updated <span class="input"><input  type="email" name="email" placeholder="your email address" /></span><span class="plus"><a href="">+</a></span></span>	
+			</div>
+			<div id="bannerbottomright">
+				<ul>
+					<li>Find us here</li>
+					<li><a href=""><img class="bannericons" src="assets/images/f.png"   alt="bannerbottomfacebookim"/></a></li>
+					<li><a href=""><img class="bannericons" src="assets/images/t.png"   alt="bannerbottomtwitterim"/></a></li>
+					<li><a href=""><img class="bannericons" src="assets/images/g.png"   alt="bannerbottomgoogleim"/></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- banner ends here -->
+	<!-- --------------------------------------------ng-view--------------------------------------------------->
+	<div id="content" ng-view>
+		
+	</div>
+	<!-- --------------------------------------------ng-view--------------------------------------------------->
+	
+	<!--footer ends here -->
+		<div id="footerHead">
+		<div class="container">
+			<h3>About LookShop</h3>
+			<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliq.jet. Aenem sollicitudin. Lorem quies biben auctor. nisi elli consequat ipsum, nec sagittis sem ribh id elit. Duis sed odlc sit amet nibh vulpulate curses a sit amet mauris. Morbi accumsan ipsum velit. Nam nec telius a odio tincidunt auctor a omare ocio. Sed non mauns vitae erat consequat auctor eu in elit. Cass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himeraeos. Mauris in erat justio. Nultam ac uma eu felis dapibus condimentum sit amet a augue.</p>
+		</div>
+	</div>
+	<div id="footerIcons">
+		<div class="container">
+			<ul>
+				<li>We accept</li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+				<li><img src="assets/images/visa.png"></li>
+			</ul>
+		</div>
+	</div>
+	<div id="footerFoot">
+		<div class="container">
+			<div class="footerSections">
+				<h4>Customer Service</h4>
+				<ul>
+					<li>Contact</li>
+					<li>FAQ</li>
+					<li>Terms of payment</li>
+					<li>Terms of sale</li>
+					<li>Delivery terms and conditions</li>
+				</ul>
+			</div>
+			<div class="footerSections">
+				<h4>Information</h4>
+				<ul>
+					<li>Affiliate</li>
+					<li>Cookies</li>
+					<li>How to Shop</li>
+					<li>About Neily</li>
+					<li>Investor relations</li>
+				</ul>
+			</div>
+			<div class="footerSections">
+				<h4>Campaigns</h4>
+				<ul>
+					<li>Smart Phones</li>
+					<li>Tablets</li>
+					<li>Play stations</li>
+					<li>Iphones</li>
+					<li>Ipads</li>
+				</ul>
+			</div>
+			<div class="footerSections">
+				<h4>Stores</h4>
+				<ul>
+					<li>Paris</li>
+					<li>New York</li>
+					<li>London</li>
+					<li>Madrid</li>
+					<li>Tokyo</li>
+				</ul>
+			</div>
+			<div class="footerSections">
+				<h4>Social</h4>
+				<span><a href=""><img src="assets/images/facebook-logo.png"></a></span>
+				<span><a href=""><img src="assets/images/facebook-logo.png"></a></span>
+				<span><a href=""><img src="assets/images/facebook-logo.png"></a></span>
+				<span><a href=""><img src="assets/images/facebook-logo.png"></a></span>
+				<span><a href=""><img src="assets/images/facebook-logo.png"></a></span>
+				<span><a href=""><img src="assets/images/facebook-logo.png"></a></span>
+			</div>
+			<div id="footerSectionImage">
+				<img src="assets/images/flipkart-logo.png">
+			</div>
+		</div>
+	</div>
+	<!--footer ends here -->
+
+	
+
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="controllers/home.js"></script>
+	<!--<script type="text/javascript" src="controllers/register.js"></script>
+	<script type="text/javascript" src="controllers/logIn.js"></script>
+	<script type="text/javascript" src="controllers/productslist.js"></script>
+	<script type="text/javascript" src="controllers/checkOut.js"></script>
+	<script type="text/javascript" src="controllers/cart.js"></script>
+	<script type="text/javascript" src="controllers/myAccount.js"></script>
+	<script type="text/javascript" src="controllers/myOrders.js"></script>-->
+
+</body>
+</html>

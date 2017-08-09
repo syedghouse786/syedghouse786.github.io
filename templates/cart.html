@@ -1,0 +1,11 @@
+<div id="products-in-cart">
+	<h3 class="products-filters-heading"><img src="assets/images/bag.png"/>My cart</h3>
+	<div ng-show="!productsInCart.length">Your cart is empty</div>
+	<div ng-repeat="product in productsInCart track by $index">
+		<div id="cart-product-image">
+			<img ng-src="{{product.imgurl}}"/>
+			{{product.name}} - {{product.price| currency}}
+			<button type="button" ng-click="removeFromCart(product, $index)">Remove</button>
+		</div>
+	</div>
+</div>

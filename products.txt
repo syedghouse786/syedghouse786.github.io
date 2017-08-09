@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Nokia Lumia 950XL",
+    "description": "Nokia brand, Lumia 950XL model",
+    "imgurl": "blank",
+    "price": 530,
+    "sale price": 550,
+    "quantity": 1,
+    "id": 1,
+    "sale end date": "01/01/2017",
+    "category": "mobile"
+  },
+  {
+    "name": "Samsung galaxy S7 edge",
+    "description": "Samsung brand, galaxy S7 model",
+    "imgurl": "blank",
+    "price": 580,
+    "sale price": 600,
+    "quantity": 1,
+    "id": 2,
+    "sale end date": "15/01/2017",
+    "category": "mobile"
+  },
+  {
+    "name": "Apple iphone 7",
+    "description": "Apple brand, iphone 7 model",
+    "imgurl": "blank",
+    "price": 750,
+    "sale price": 750,
+    "quantity": 1,
+    "id": 3,
+    "sale end date": "30/01/2017",
+    "category": "mobile"
+  },
+  {
+    "name": "Google Pixel",
+    "description": "Google brand, Pixel model",
+    "imgurl": "blank",
+    "price": 650,
+    "sale price": 650,
+    "quantity": 1,
+    "id": 4,
+    "sale end date": "30/02/2017",
+    "category": "mobile"
+  }
+]

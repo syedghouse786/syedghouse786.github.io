@@ -1,0 +1,13 @@
+<div class="slider">
+  <div class="slide" ng-repeat="product in products" ng-show="product.visible">
+    <img ng-src="{{product.imgurl}}" />
+  </div>
+  <div class="arrows">
+    <button ng-click="prev()">
+      <img src="assets/images/shop.png" />
+    </button>
+    <button ng-click="next()">
+      <img src="assets/images/shop.png" />
+    </button>
+  </div>
+</div>
